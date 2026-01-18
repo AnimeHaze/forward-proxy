@@ -1,4 +1,4 @@
-PROGNAME = opera-proxy
+PROGNAME = forward-proxy
 OUTSUFFIX = bin/$(PROGNAME)
 BUILDOPTS = -a -tags netgo -trimpath -asmflags -trimpath
 LDFLAGS = -ldflags '-s -w -extldflags "-static"'
