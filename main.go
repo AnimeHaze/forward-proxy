@@ -5,13 +5,11 @@ import (
     "fmt"
     "log"
     "net/http"
-    "strings"
     
     "github.com/elazarl/goproxy"
 )
 
 func main() {
-    // Define a port flag with default value
     port := flag.String("port", "8033", "Port to listen on")
     host := flag.String("host", "", "Host to bind to (optional)")
     verbose := flag.Bool("verbose", true, "Enable verbose logging")
