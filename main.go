@@ -34,8 +34,14 @@ func main() {
 	port := flag.String("port", "8033", "Port to listen on")
 	host := flag.String("host", "", "Host to bind to (optional)")
 	verbose := flag.Bool("verbose", true, "Enable verbose logging")
+	version := flag.Bool("version", false, "Print version and exit")
 
 	flag.Parse()
+	
+	if *version {
+	  fmt.Println("2.0.0")
+	  return
+  }
 
 	prx, err := httpproxy.NewProxy()
 	if err != nil {
